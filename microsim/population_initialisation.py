@@ -304,8 +304,10 @@ class PopulationInitialisation:
         Read a population of individuals. Includes time-use & health info.
 
         :param home_name: A string to describe flows to people's homes (probably 'Home')
-        :return A tuple with new dataframes of individuals and households
+        :return: A tuple with new dataframes of individuals and households
+
         """
+
         print("Reading time use and health data ... ", )
         # filename = os.path.join(cls.DATA_DIR, "devon-tu_health", "Devon_simulated_TU_health.txt")
         # filename = os.path.join(cls.DATA_DIR, "devon-tu_health", "Devon_keyworker.txt")
@@ -560,9 +562,9 @@ class PopulationInitialisation:
         All schools are initially read together, but flows are separated into primary and secondary
 
         :param study_msoas: A list of MSOAs in the study area (flows outside of this will be ignored)
-        :return: A tuple of three dataframes. All schools, then the flows to primary and secondary
-        (Schools, PrimaryFlows, SeconaryFlows). Although all the schools are one dataframe, no primary flows will flow
-        to secondary schools and vice versa).
+        :return: A tuple of three dataframes. All schools, then the flows to primary and secondary (Schools, PrimaryFlows, SeconaryFlows). 
+            Although all the schools are one dataframe, no primary flows will flow to secondary schools and vice versa).
+
         """
 
         # devon data
@@ -836,8 +838,8 @@ class PopulationInitialisation:
         Read the flows between each MSOA and the most commonly visited shops
 
         :param study_msoas: A list of MSOAs in the study area (flows outside of this will be ignored)
-        :return: A tuple of two dataframes. One containing all of the flows and another
-        containing information about the stores themselves.
+        :return: A tuple of two dataframes. One containing all of the flows and another containing information about the stores themselves.
+
         """
 
         # Devon data
