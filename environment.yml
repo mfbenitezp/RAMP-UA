@@ -1,4 +1,4 @@
-name: ramp-ua
+name: ramp-ua-fer
 channels:
   - conda-forge
   - defaults

@@ -1,0 +1,4 @@
+convertbng==0.6.25
+-r file:microsim/opencl/requirements.txt
+sphinx_rtd_theme
+sphinx-autodoc-typehints
