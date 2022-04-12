@@ -180,7 +180,7 @@ def main(parameters_file, no_parameters_file, initialise, iterations, scenario, 
     # m = Microsim(data_dir=data_dir, testing=True, output=output)
 
     # cache to hold previously calculate population data
-    cache = InitialisationCache(cache_dir=data_dir + "/caches/")
+    cache = InitialisationCache(cache_dir=os.path.join(data_dir, "caches"))
 
     # generate new population dataframes if we aren't using the cache, or if the cache is empty
     if not use_cache or cache.is_empty():
@@ -240,7 +240,7 @@ def run_opencl_model(individuals_df, activity_locations, time_activity_multiplie
             print("Switching to healthier population")
             snapshot.switch_to_healthier_population()
     if initialise:
-        print("Have finished initialising model. -init flag is set so not running it. Exitting")
+        print("Have finished initialising model. -init flag is set so not running it. Exiting")
         return
 
     run_mode = "GUI" if use_gui else "headless"
